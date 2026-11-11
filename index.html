@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d20"><title>FʟᴀᴍᴇX | Free Fire Top-up</title>
+<style>
+:root{--bg:#080d20;--panel:#111a36;--panel2:#18234a;--line:#2b3b70;--txt:#f7f8ff;--muted:#aeb9df;--blue:#4f8cff;--purple:#9b62ff;--cyan:#75d8ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% -5%,#283c86 0,transparent 38%),radial-gradient(ellipse at 100% 10%,#4b237f 0,transparent 34%),var(--bg);color:var(--txt);font:15px/1.55 system-ui,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#080d20eF;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1080px;margin:auto;padding:16px}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:25px;font-weight:950;letter-spacing:1px}.brand span{background:linear-gradient(90deg,var(--blue),var(--purple));color:transparent;background-clip:text}
+button{border:0;border-radius:12px;padding:12px 16px;background:linear-gradient(110deg,var(--blue),var(--purple));color:white;font-weight:800;cursor:pointer}button.secondary{background:#1b2852;border:1px solid var(--line);color:var(--txt)}button:disabled{opacity:.5;cursor:not-allowed}
+.hero{padding:48px 0 28px}.eyebrow{color:var(--cyan);font-weight:850;letter-spacing:2px}.hero h1{font-size:clamp(36px,7vw,62px);line-height:1.04;margin:10px 0}.gradient{background:linear-gradient(90deg,#69b7ff,#b48aff);color:transparent;background-clip:text}.hero p,.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px}.card{background:linear-gradient(145deg,#152044,#10172f);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 12px 35px #0002}.card h2,.card h3{margin:0 0 10px}
+label{display:block;color:var(--muted);font-size:13px;margin-top:9px}input,select{width:100%;padding:13px;margin:6px 0 10px;border-radius:11px;border:1px solid var(--line);background:#09112a;color:white;outline:none}
+.pkg{width:100%;text-align:left;background:#111b3b;border:1px solid var(--line);margin:4px 0}.pkg.active{border-color:#a77aff;box-shadow:0 0 0 1px #a77aff}.pkg strong{display:block}.price{font-size:22px;color:#a9caff;font-weight:900}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.tag{display:inline-block;border-radius:30px;padding:4px 10px;background:#26366d;color:#c8d9ff;font-size:12px}.notice{border:1px solid #48518d;background:#1a2045;padding:13px;border-radius:12px;color:#d7dcff;font-size:13px}
+#status{color:#c3d6ff;min-height:28px;padding:8px 0}.hidden{display:none!important}.order{border-top:1px solid var(--line);padding:12px 0;overflow-wrap:anywhere}footer{text-align:center;border-top:1px solid var(--line);color:var(--muted);margin-top:35px;padding:25px}
+@media(max-width:600px){.wrap{padding:13px}.hero{padding-top:28px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="brand">Fʟᴀᴍᴇ<span>X</span>–ᎡᎷ</div></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">BANGLADESH • FREE FIRE TOP-UP</div><h1>Top up your game.<br><span class="gradient">Power up with FʟᴀᴍᴇX–ᎡᎷ.</span></h1><p>Choose your diamonds, enter your Player UID and submit your order details.</p></section>
+
+<form id="orderForm" method="POST" action="https://formsubmit.co/systemhuntertaskforce@gmail.com" class="card">
+  <input type="hidden" name="_subject" value="New FʟᴀᴍᴇX Free Fire Top-up Order">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="Selected Package" id="packageField" required>
+
+  <h2>01 / Customer details</h2>
+  <label for="customerName">Full Name</label>
+  <input id="customerName" type="text" name="Full Name" placeholder="Enter your name" required>
+  <label for="customerEmail">Email Address</label>
+  <input id="customerEmail" type="email" name="Email Address" placeholder="Enter your email address" required>
+  <label for="uid">Free Fire Player UID</label>
+  <input id="uid" type="text" name="Free Fire Player UID" inputmode="numeric" pattern="[0-9]{6,20}" placeholder="Enter numeric Player UID" required>
+  <p class="muted">Please check your UID before ordering.</p>
+
+  <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+  <h2>02 / Select package</h2>
+  <div id="packages"></div>
+
+  <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+  <h2>03 / Payment details</h2>
+  <p class="muted">Send the exact package amount to one of these personal numbers, then enter the transaction ID.</p>
+  <p><b>bKash:</b> 01789376043 - Send Money</p>
+  <p><b>Nagad:</b> 01783972659 - Send Money</p>
+  <label for="method">Payment Method</label>
+  <select id="method" name="Payment Method" required><option value="bKash">bKash</option><option value="Nagad">Nagad</option></select>
+  <label for="trx">Transaction ID</label>
+  <input id="trx" type="text" name="Transaction ID" placeholder="Enter payment transaction ID" required>
+  <label style="display:flex;align-items:flex-start;gap:9px;margin:12px 0">
+    <input type="checkbox" name="Payment Confirmation" value="Customer confirms payment was sent" required style="width:auto;margin:3px 0 0">
+    <span>I confirm that I have sent the payment and the information above is correct.</span>
+  </label>
+  <button id="submitOrder" type="submit" style="width:100%;margin-top:12px">Submit Top-up Order</button>
+  <p class="muted" style="margin-top:12px">Your order details will be sent to TEAM SHT. Do not submit until payment has been sent.</p>
+  <p id="status" role="status" aria-live="polite"></p>
+</form>
+</main>
+<footer>© <span id="year"></span> FʟᴀᴍᴇX • Bangladesh</footer>
+<script>
+const catalog = [
+  {id:"d25", name:"25 Diamonds", price:25},
+  {id:"d50", name:"50 Diamonds", price:43},
+  {id:"d115", name:"115 Diamonds", price:85},
+  {id:"d240", name:"240 Diamonds", price:170},
+  {id:"d355", name:"355 Diamonds", price:260},
+  {id:"d610", name:"610 Diamonds", price:410},
+  {id:"d850", name:"850 Diamonds", price:590},
+  {id:"d1015", name:"1015 Diamonds", price:700},
+  {id:"d1240", name:"1240 Diamonds", price:830},
+  {id:"d1480", name:"1480 Diamonds", price:1215},
+  {id:"d2530", name:"2530 Diamonds", price:1640},
+  {id:"d3010", name:"3010 Diamonds", price:1995},
+  {id:"d4010", name:"4010 Diamonds", price:2605},
+  {id:"d5060", name:"5060 Diamonds", price:3300},
+  {id:"d90", name:"Weekly Lite 90 Diamonds", price:50},
+  {id:"d445", name:"Weekly 445 Diamonds", price:185},
+  {id:"d2500", name:" Monthly 2500 Diamonds", price:850},
+  {id:"d6100", name:"100 likes", price:20},
+  {id:"d530", name:"530 likes – 3 day", price:90},
+  {id:"d1050", name:"1050 likes – 5 day", price:170},
+  {id:"d1500", name:"1500 likes – 7 day", price:230},
+  {id:"d3200", name:"3200 likes – 15 day", price:380},
+  {id:"d200", name:"10 Level Up-Pass", price:90},
+  {id:"d200", name:"20 Level Up-Pass", price:90},
+  {id:"d200", name:"30 Level Up-Pass", price:90},
+  {id:"d1270", name:" All Level Up-Pass - 1270 💎", price:500}
+];
+const packages = document.getElementById("packages");
+const packageField = document.getElementById("packageField");
+const form = document.getElementById("orderForm");
+const status = document.getElementById("status");
+let selected = null;
+document.getElementById("year").textContent = new Date().getFullYear();
+packages.innerHTML = catalog.map(p =>
+  `<button type="button" class="pkg" data-id="${p.id}"><strong>${p.name}</strong><span class="price">৳${p.price}</span></button>`
+).join("");
+packages.addEventListener("click", event => {
+  const button = event.target.closest("[data-id]");
+  if (!button) return;
+  selected = catalog.find(p => p.id === button.dataset.id);
+  packageField.value = `${selected.name} - ৳${selected.price}`;
+  packages.querySelectorAll(".pkg").forEach(item => item.classList.toggle("active", item === button));
+  status.textContent = `Selected: ${selected.name} - ৳${selected.price}`;
+});
+form.addEventListener("submit", event => {
+  if (!selected) {
+    event.preventDefault();
+    status.textContent = "Please select a Diamond Package first.";
+    packages.scrollIntoView({behavior:"smooth", block:"center"});
+    return;
+  }
+  if (!/^[0-9]{6,20}$/.test(document.getElementById("uid").value.trim())) {
+    event.preventDefault();
+    status.textContent = "Please enter a valid numeric Free Fire UID.";
+    return;
+  }
+  document.getElementById("submitOrder").disabled = true;
+  document.getElementById("submitOrder").textContent = "Sending order...";
+});
+</script>
+</body></html>
